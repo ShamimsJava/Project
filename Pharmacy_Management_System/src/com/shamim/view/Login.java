@@ -2,11 +2,9 @@ package com.shamim.view;
 
 import com.shamim.domain.User;
 import com.shamim.service.UserService;
-import java.sql.PreparedStatement;
+import java.awt.event.KeyEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -42,6 +40,11 @@ public class Login extends javax.swing.JFrame {
         jPasswordField1.setBackground(new java.awt.Color(102, 102, 255));
         jPasswordField1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jPasswordField1.setBorder(null);
+        jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPasswordField1KeyPressed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton2.setText("Registration");
@@ -143,7 +146,7 @@ public class Login extends javax.swing.JFrame {
             if (rs.next()) {
                 setVisible(false);
                 new Dashboard().setVisible(true);
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(null, "Wrong Username or Password");
             }
         } catch (SQLException ex) {
@@ -155,6 +158,24 @@ public class Login extends javax.swing.JFrame {
         setVisible(false);
         new Registration().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            UserService us = new UserService();
+            User u = new User(jTextField1.getText(), jPasswordField1.getText());
+            try {
+                ResultSet rs = us.getLogin(u);
+                if (rs.next()) {
+                    setVisible(false);
+                    new Dashboard().setVisible(true);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Wrong Username or Password");
+                }
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null, "Something error");
+            }
+        }
+    }//GEN-LAST:event_jPasswordField1KeyPressed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

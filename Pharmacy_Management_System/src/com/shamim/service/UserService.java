@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
  *
  * @author Shamim
  */
+
 public class UserService {
     private Connection conn;
     private PreparedStatement pst;
@@ -25,10 +26,10 @@ public class UserService {
             pst.setString(1, u.getUsername());
             pst.setString(2, u.getPassword());
             rs = pst.executeQuery();
-            return rs;           
+            return rs;
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
             return null;
-        }   
+        }
     }
 }
