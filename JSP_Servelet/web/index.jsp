@@ -19,6 +19,7 @@ There are 3 types of directives in jsp:
     </head>
     <body>
         <h1>MD. SHAMIM SARKER</h1>
+        <h2>The current date and time: <%= new java.util.Date() %></h2>
         <%-- Expression --%>
         <%= "This is Expression. The sum is : "%>
         <%= (2+2)%><br><br>
@@ -33,7 +34,15 @@ There are 3 types of directives in jsp:
         
         <%-- Scriptlet --%>
         <% if(true){%>This is true content<%} else{%>This is false content<%}%>
+       
+        <p>-------------------------------------------------------------</p>
         
+        <p><a href="newjsp.jsp">Click here to go newjsp</a></p>
+        <p><a href="Test_servlet">Sample Servlet page</a></p>
         
     </body>
 </html>
+
+<!--
+    <br><br>
+-->
