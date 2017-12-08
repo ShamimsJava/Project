@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="BoutiqueShop">
+  <ClassDiagramComponents>
+    <Class name="CommonMenu" package="com.urmi.common" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="displayMenu" returnType="JMenuBar" visibility="public" isStatic="true">
+          <Argument type="JFrame" name="f"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MySqlDbConnection" package="com.urmi.conn" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getConnection" returnType="Connection" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="TestMySqlConnection" package="com.urmi.conn" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProductSales" package="com.urmi.domain" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="productCode" type="String" visibility="private"/>
+        <Field name="qty" type="int" visibility="private"/>
+        <Field name="unitPrice" type="double" visibility="private"/>
+        <Field name="totalPrice" type="double" visibility="private"/>
+        <Field name="category" type="String" visibility="private"/>
+        <Field name="salesDate" type="String" visibility="private"/>
+        <Field name="customername" type="String" visibility="private"/>
+        <Field name="customerMobile" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="productCode"/>
+          <Argument type="int" name="qty"/>
+          <Argument type="double" name="unitPrice"/>
+          <Argument type="double" name="totalPrice"/>
+          <Argument type="String" name="category"/>
+          <Argument type="String" name="salesDate"/>
+          <Argument type="String" name="customername"/>
+          <Argument type="String" name="customerMobile"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getProductCode" returnType="String" visibility="public"/>
+        <Method name="setProductCode" returnType="void" visibility="public">
+          <Argument type="String" name="productCode"/>
+        </Method>
+        <Method name="getQty" returnType="int" visibility="public"/>
+        <Method name="setQty" returnType="void" visibility="public">
+          <Argument type="int" name="qty"/>
+        </Method>
+        <Method name="getUnitPrice" returnType="double" visibility="public"/>
+        <Method name="setUnitPrice" returnType="void" visibility="public">
+          <Argument type="double" name="unitPrice"/>
+        </Method>
+        <Method name="getTotalPrice" returnType="double" visibility="public"/>
+        <Method name="setTotalPrice" returnType="void" visibility="public">
+          <Argument type="double" name="totalPrice"/>
+        </Method>
+        <Method name="getCategory" returnType="String" visibility="public"/>
+        <Method name="setCategory" returnType="void" visibility="public">
+          <Argument type="String" name="category"/>
+        </Method>
+        <Method name="getSalesDate" returnType="String" visibility="public"/>
+        <Method name="setSalesDate" returnType="void" visibility="public">
+          <Argument type="String" name="salesDate"/>
+        </Method>
+        <Method name="getCustomername" returnType="String" visibility="public"/>
+        <Method name="setCustomername" returnType="void" visibility="public">
+          <Argument type="String" name="customername"/>
+        </Method>
+        <Method name="getCustomerMobile" returnType="String" visibility="public"/>
+        <Method name="setCustomerMobile" returnType="void" visibility="public">
+          <Argument type="String" name="customerMobile"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProductSummary" package="com.urmi.domain" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="productCode" type="String" visibility="private"/>
+        <Field name="purchaseQty" type="int" visibility="private"/>
+        <Field name="soldQty" type="int" visibility="private"/>
+        <Field name="avilableQty" type="int" visibility="private"/>
+        <Field name="productName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="purchaseQty"/>
+          <Argument type="int" name="avilableQty"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="productCode"/>
+          <Argument type="int" name="purchaseQty"/>
+          <Argument type="int" name="soldQty"/>
+          <Argument type="int" name="avilableQty"/>
+          <Argument type="String" name="productName"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getProductCode" returnType="String" visibility="public"/>
+        <Method name="setProductCode" returnType="void" visibility="public">
+          <Argument type="String" name="productCode"/>
+        </Method>
+        <Method name="getPurchaseQty" returnType="int" visibility="public"/>
+        <Method name="setPurchaseQty" returnType="void" visibility="public">
+          <Argument type="int" name="purchaseQty"/>
+        </Method>
+        <Method name="getSoldQty" returnType="int" visibility="public"/>
+        <Method name="setSoldQty" returnType="void" visibility="public">
+          <Argument type="int" name="soldQty"/>
+        </Method>
+        <Method name="getAvilableQty" returnType="int" visibility="public"/>
+        <Method name="setAvilableQty" returnType="void" visibility="public">
+          <Argument type="int" name="avilableQty"/>
+        </Method>
+        <Method name="getProductName" returnType="String" visibility="public"/>
+        <Method name="setProductName" returnType="void" visibility="public">
+          <Argument type="String" name="productName"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="User" package="com.urmi.domain" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="mobile" type="String" visibility="private"/>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+        <Field name="userType" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="mobile"/>
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="userType"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getMobile" returnType="String" visibility="public"/>
+        <Method name="setMobile" returnType="void" visibility="public">
+          <Argument type="String" name="mobile"/>
+        </Method>
+        <Method name="getUsername" returnType="String" visibility="public"/>
+        <Method name="setUsername" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="getUserType" returnType="String" visibility="public"/>
+        <Method name="setUserType" returnType="void" visibility="public">
+          <Argument type="String" name="userType"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProductSalesService" package="com.urmi.service" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="conn" type="Connection" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="save" returnType="void" visibility="public">
+          <Argument type="ProductSales" name="s"/>
+        </Method>
+        <Method name="saveList" returnType="void" visibility="public">
+          <Argument type="Set&lt;ProductSales&gt;" name="productSales"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="ProductSales" name="s"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getList" returnType="List&lt;ProductSales&gt;" visibility="public"/>
+        <Method name="getProductSalesByID" returnType="ProductSales" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProductService" package="com.urmi.service" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="conn" type="Connection" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="save" returnType="void" visibility="public">
+          <Argument type="Product" name="s"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Product" name="s"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getList" returnType="List&lt;Product&gt;" visibility="public"/>
+        <Method name="getProductByID" returnType="Product" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProductSummaryService" package="com.urmi.service" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="conn" type="Connection" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="save" returnType="void" visibility="public">
+          <Argument type="ProductSummary" name="s"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="ProductSummary" name="s"/>
+        </Method>
+        <Method name="updateWhenSales" returnType="void" visibility="public">
+          <Argument type="ProductSummary" name="s"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getList" returnType="List&lt;ProductSummary&gt;" visibility="public"/>
+        <Method name="getProductSummary" returnType="User" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getProductSummaryByProductCode" returnType="ProductSummary" visibility="public">
+          <Argument type="String" name="productCode"/>
+        </Method>
+        <Method name="getProductSummaryById" returnType="ProductSummary" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UserService" package="com.urmi.service" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields>
+        <Field name="conn" type="Connection" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="save" returnType="void" visibility="public">
+          <Argument type="User" name="s"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="User" name="s"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getList" returnType="List&lt;User&gt;" visibility="public"/>
+        <Method name="getUser" returnType="User" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getUserByUsername" returnType="User" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="ProductDao" package="com.urmi.dao" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Methods>
+        <Method name="save" returnType="void" visibility="package">
+          <Argument type="Product" name="s"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="package">
+          <Argument type="Product" name="s"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="package">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getList" returnType="List&lt;Product&gt;" visibility="package"/>
+        <Method name="getProductByID" returnType="Product" visibility="package">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="ProductSalesDao" package="com.urmi.dao" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Methods>
+        <Method name="save" returnType="void" visibility="package">
+          <Argument type="ProductSales" name="s"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="package">
+          <Argument type="ProductSales" name="s"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="package">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getList" returnType="List&lt;ProductSales&gt;" visibility="package"/>
+        <Method name="getProductSalesByID" returnType="ProductSales" visibility="package">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="ProductSummaryDao" package="com.urmi.dao" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Methods>
+        <Method name="save" returnType="void" visibility="package">
+          <Argument type="ProductSummary" name="s"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="package">
+          <Argument type="ProductSummary" name="s"/>
+        </Method>
+        <Method name="updateWhenSales" returnType="void" visibility="public">
+          <Argument type="ProductSummary" name="s"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="package">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getList" returnType="List&lt;ProductSummary&gt;" visibility="package"/>
+        <Method name="getProductSummary" returnType="User" visibility="package">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getProductSummaryByProductCode" returnType="ProductSummary" visibility="public">
+          <Argument type="String" name="productCode"/>
+        </Method>
+        <Method name="getProductSummaryById" returnType="ProductSummary" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="UserDao" package="com.urmi.dao" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Methods>
+        <Method name="save" returnType="void" visibility="package">
+          <Argument type="User" name="s"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="package">
+          <Argument type="User" name="s"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="package">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getList" returnType="List&lt;User&gt;" visibility="package"/>
+        <Method name="getUser" returnType="User" visibility="package">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getUserByUsername" returnType="User" visibility="package">
+          <Argument type="String" name="username"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.urmi.service.ProductSummaryService" target="com.urmi.domain.User" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.urmi.dao.ProductSummaryDao" target="com.urmi.domain.User" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.urmi.service.ProductService" target="com.urmi.dao.ProductDao"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.urmi.service.UserService" target="com.urmi.dao.UserDao"/>
+    <UseRelation source="com.urmi.service.UserService" target="com.urmi.domain.User" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.urmi.service.ProductSalesService" target="com.urmi.dao.ProductSalesDao"/>
+    <UseRelation source="com.urmi.dao.ProductSummaryDao" target="com.urmi.domain.ProductSummary" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.urmi.service.ProductSummaryService" target="com.urmi.dao.ProductSummaryDao"/>
+    <UseRelation source="com.urmi.dao.ProductSalesDao" target="com.urmi.domain.ProductSales" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.urmi.service.ProductSummaryService" target="com.urmi.domain.ProductSummary" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.urmi.dao.UserDao" target="com.urmi.domain.User" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.urmi.service.ProductSalesService" target="com.urmi.domain.ProductSales" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
