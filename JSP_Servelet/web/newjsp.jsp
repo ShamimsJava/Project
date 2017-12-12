@@ -25,8 +25,5 @@
         
         <%= obj.getStname()%><br><br>
         <a href="index.jsp">Click here to go index</a>
-        <p>-------------------------------------------------------------</p><br> 
-        
-      
     </body>
 </html>

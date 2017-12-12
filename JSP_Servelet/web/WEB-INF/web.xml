@@ -4,9 +4,25 @@
         <servlet-name>Test</servlet-name>
         <servlet-class>testServlet.Test</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>handleFormData</servlet-name>
+        <servlet-class>testServlet.handleFormData</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ExtraServlet</servlet-name>
+        <servlet-class>ExtraServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Test</servlet-name>
         <url-pattern>/Test_servlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>handleFormData</servlet-name>
+        <url-pattern>/handleFormData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExtraServlet</servlet-name>
+        <url-pattern>/ExtraServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

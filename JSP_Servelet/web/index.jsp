@@ -39,6 +39,7 @@ There are 3 types of directives in jsp:
         
         <p><a href="newjsp.jsp">Click here to go newjsp</a></p>
         <p><a href="Test_servlet">Sample Servlet page</a></p>
+        <p><a href="servletformdata.jsp">Sample Servlet page</a></p>
         
     </body>
 </html>
